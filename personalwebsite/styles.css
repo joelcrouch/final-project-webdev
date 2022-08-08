@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Audiowide", sans-serif, "Helvetica Neue",Helvetica,Arial;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    z-index: 25;
+    font-size: 1rem;
+    top: 0;
+    position: sticky;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    /*radial gradient from https://gradients.shecodes.io/gradients/141 */
+}
+
+.navbar-container {
+    display:flex;
+    justify-content: space-between;
+    height:80px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    z-index: 1;
+
+}
+
+.my_name {
+    display: flex;
+    justify-content:center;
+    text-decoration: none;
+    text-align:center;
+    font-size: 2rem;
+    align-items: center;
+    color: yellow;   
+}
+
+#menu{
+    display: none;
+}
+
+.toggle {
+    display:none;
+}
+
+.toggle .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+
+.navbarMenu{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    list-style:none;
+}
+
+.navbar-item {
+    height: 75px;
+}
+
+.navbar-link  {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    padding: 0 1rem;
+    color: rgb(255, 163, 77);
+}
+
+.navbar-link:hover{
+    color: yellow;
+}
+.navbar-contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    padding: 0 1rem;  
+}
+
+.btn {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    outline: none;    
+    border: none;
+    background: rgb(19, 30, 37) 66%;
+    color:yellow; 
+}
+
+.btn:hover{
+    color: white;
+    outline: solid;
+    border-radius: 10px;
+}
+#biopicback{
+    background: rgb(255, 163, 77);
+}
+#biopic {
+    width: 100%;
+    margin: 1px auto;
+    display: block;
+    border-radius: 10px;
+    padding-top: 3px;
+    background: rgb(255, 163, 77);
+}
+#bio{
+    font-family:  "sans-serif", New Roman, Times, serif;
+    background: rgb(255, 163, 77);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#pomodoro {
+    font-family:  "sans-serif", New Roman, Times, serif;
+    background: rgb(255, 163, 77);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.responsive{
+    max-width: 100%;
+    height: auto;
+    font-size: 1rem;
+}
+
+#codepic {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    max-height: 15rem;
+}
+#mergesort{
+    background: rgb(255, 163, 77);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#mergesortpic {
+    width: 60%;
+    margin: 1px auto;
+    display: block;
+    border-radius: 10px;
+    padding-top: 3px;
+}
+#resume {
+    background: rgb(255, 163, 77);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#formsection {
+    margin-left: 0px;
+}
+#email {
+    margin-left: 3.1rem;
+}
+#submitform {
+    background: rgb(255, 163, 77);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#subject {
+    height:200px;
+    text-align: top;
+    margin-left: 2rem;
+    padding-right: 0rem;
+}
+#button {
+    display: flex;
+    align-items: center;
+}
+#contact-button {
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    height: 15vh;
+    max-width: 50%;
+    padding: 0 1rem;
+    outline: none;    
+    border: none;
+    border-radius: 10px;
+    background: rgb(19, 30, 37) 66%;
+    color:yellow;
+}
+#messageinput{
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+#bottombutton{
+    margin-top: 5px;
+    justify-content:center;
+}
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    height: 15vh;
+    max-width: 50%;
+    padding: 0 1rem;
+    outline: none;    
+    border: none;
+    border-radius: 10px;
+    background: rgb(19, 30, 37) 66%;
+    color:yellow;  
+}
+
+
+@media all and (max-width: 769) {
+    .navbar {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+               
+    }
+    .navbar-container{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content: space-between;
+        height:80px;
+        /* width: 100%; */
+        padding: 0 40px;
+        margin: 0 auto;
+        max-width:1500px;
+        z-index: 1;
+    
+    } 
+    .navbar .my_name{ 
+        color: white ;
+    }
+
+    #menu {
+        display: block;
+        cursor: pointer;
+        top: 15%;
+        right: 5%;
+        position: absolute;
+        transform: translate(5%, 15%);
+    }
+    .toggle{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .toggle .line{
+        display: block;
+        width:30px;
+        margin: 3px, auto;
+        height: 3px;
+        background: rgb(255, 163, 77);
+        transition: 0.5s;
+    }
+    
+    .navbarMenu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        top: -1000px;
+        opacity: 0;
+        transition: all 1s ease;
+        height: 45vh;
+        z-index: -1;
+
+    }
+
+    .navbarMenu.active {
+
+    }
+
+    .navbar-item{
+        width: 75%;
+    }
+
+    .navbar-link{
+        display: table;
+        width: 75%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .navbar-contact-button{
+        padding: 1px;
+    }
+
+    .btn{
+        display: flex;
+        justify-content:center;
+        text-decoration: none;
+        align-items: center;
+        height: 75%;
+        margin: 0;
+        outline: none;    
+        border: none;
+        background: rgb(19, 30, 37) 66%;
+        color:yellow; 
+
+    }
+}
